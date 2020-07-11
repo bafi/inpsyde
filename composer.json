@@ -1,4 +1,13 @@
 {
+    "name": "gouda/inpsyde",
+    "description": "Install the required packages for testing and code standard",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Moustafa Gouda",
+            "email": "bafi99@gmail.com"
+        }
+    ],
     "require-dev": {
         "brain/monkey": "2.*",
         "phpunit/phpunit": "^9.2",
@@ -6,5 +15,5 @@
     },
     "scripts": {
         "test": "./vendor/phpunit/phpunit/phpunit"
-    },
+    }
 }

@@ -19,7 +19,7 @@ declare( strict_types=1 );
  * Version:           1.0.0
  * Author:            MGO
  * Author URI:        https://www.linkedin.com/in/moustafagouda/
- * License:           GPL-2.0+
+ * License:           GPL-3.0-only
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       inpsyde
  */
