@@ -4,6 +4,7 @@ declare( strict_types=1 );
 namespace Inpsyde\Includes;
 
 use Inpsyde\admin\AdminConfigurationPage;
+use Inpsyde\front\FrontUserPage;
 
 /**
  * The core plugin class.
@@ -24,6 +25,7 @@ class InpsydeCore
         $this->pluginName = 'inpsyde';
         $this->loadDependencies();
         $this->defineAdminHooks();
+        $this->defineFrontFilters();
     }
 
     /**
@@ -37,6 +39,12 @@ class InpsydeCore
         require_once dirname(__FILE__) . '/../interfaces/AdminConfigurationPageInterface.php';
         require_once dirname(__FILE__) . '/../admin/AdminConfigurationPage.php';
 
+        /**
+         * The class responsible for defining all actions that occur in the public-facing
+         * side of the site.
+         */
+        require_once dirname(__FILE__) . '/../interfaces/FrontUserPageInterface.php';
+        require_once dirname(__FILE__) . '/../front/FrontUserPage.php';
     }
 
     /**
@@ -46,6 +54,15 @@ class InpsydeCore
     private function defineAdminHooks()
     {
         (new AdminConfigurationPage())->addHooks();
+    }
+
+    /**
+     * Register all of the hooks related to the public-facing functionality
+     * of the plugin.
+     */
+    private function defineFrontFilters()
+    {
+	    (new FrontUserPage())->addFilters();
     }
 
 	/**
