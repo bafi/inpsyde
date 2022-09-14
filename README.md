@@ -1,7 +1,3 @@
-### Inpsyde wordpress plugin
-
-- This a technical assignment applied for [inpsyde gmbh](https://inpsyde.com/). 
-
 #### Useful links
 
 * [Inpsyde PHP Coding Standards](https://github.com/inpsyde/php-coding-standards)
